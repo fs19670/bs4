@@ -5,11 +5,11 @@ import re
 from PIL import Image
 
 # Sample image and page settings
-img = Image.open('Aldrich-Capital-Partners.jpg')
-st.set_page_config(page_title="Aldrich Capital Partners", page_icon=img)
+# img = Image.open('Aldrich-Capital-Partners.jpg')
+# st.set_page_config(page_title="Aldrich Capital Partners", page_icon=img)
 
 # Sidebar with logo
-st.sidebar.image("aldrich-logo.png", width=250)
+# st.sidebar.image("aldrich-logo.png", width=250)
 
 # Sample cost settings and calculation
 COST_PER_MILLION_TOKENS = 0.13
