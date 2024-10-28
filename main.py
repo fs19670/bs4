@@ -1,5 +1,5 @@
 import streamlit as st
-import docx2txt
+# import docx2txt
 import io
 import re
 from PIL import Image
@@ -32,12 +32,12 @@ def split_company_info_by_description(company_info):
 def get_text_chunks_from_docx(docx_files):
     all_text_chunks = []
     for docx in docx_files:
-        text = docx2txt.process(io.BytesIO(docx.read()))
+        # text = docx2txt.process(io.BytesIO(docx.read()))
         pattern = r"(\n.*?interest\s*?check.*\n)"
-        splits = re.split(pattern, text, flags=re.IGNORECASE)
-        if splits:
-            companies = [splits[0]] + [f"{splits[i]}\n\n{splits[i + 1]}" for i in range(1, len(splits) - 1, 2)]
-            all_text_chunks.extend([split_company_info_by_description(company) for company in companies])
+        # splits = re.split(pattern, text, flags=re.IGNORECASE)
+        # if splits:
+            # companies = [splits[0]] + [f"{splits[i]}\n\n{splits[i + 1]}" for i in range(1, len(splits) - 1, 2)]
+            # all_text_chunks.extend([split_company_info_by_description(company) for company in companies])
     return all_text_chunks
 
 # UI structure
